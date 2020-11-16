@@ -1,11 +1,14 @@
 .contact-page-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: calc(100vh - 84px);
+  height: calc(100vh - 430px);
+  padding-top: 100px;
+
 
   .contact-image {
       background-size: cover;
       background-position: center;
+      width: 550px;
   }
   .right-column {
       display: flex;
@@ -19,12 +22,12 @@
       align-items: center;
 
       .icon {
-      font-size: 2em;
+      font-size: 3em;
       color: $teal;
       }
 
       .text {
-      font-size: 1.5em;
+      font-size: 3em;
       font-weight: 900;;
       margin-left: 21px;
       }

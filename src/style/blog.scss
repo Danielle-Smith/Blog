@@ -37,6 +37,7 @@
       display: flex;
       flex-direction: column;
       width: 800px;
+      margin-top: 20px;
 
       a {
           text-decoration: none;
@@ -48,10 +49,16 @@
           }
       }
 
-      h1 {
-          font-size: 1.5em;
-          
+      .blog-item {
+          margin: 20px 0px;
       }
+
+      h1 {
+          font-size: 3em;
+          padding-bottom: 15px;
+      }
+
+    
 
       .featured-image-wrapper {
           img {
@@ -64,3 +71,4 @@
       }
   }
 }
+

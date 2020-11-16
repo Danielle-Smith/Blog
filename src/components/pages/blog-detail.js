@@ -25,7 +25,9 @@ export default class BlogDetail extends Component {
 
     handleFeaturedImageDelete = () => {
         this.setState({
-            blogItem: ""
+            blogItem: {
+                featured_image_url: ""
+            }
         });
     }
 
@@ -59,28 +61,30 @@ export default class BlogDetail extends Component {
             blog_status
         } = this.state.blogItem;
 
+        
+
         const contentManager = () => {
             if (this.state.editMode) {
-                return <BlogForm 
+                return (
+                    <BlogForm 
                     editMode={this.state.editMode} 
                     blog={this.state.blogItem} 
                     handleFeaturedImageDelete={this.handleFeaturedImageDelete}
                     handleUpdateFormSubmission={this.handleUpdateFormSubmission}/>
+                );
             } else {
                 return (
                     <div className="content-container">
                         <h1 onClick={this.handleEditClick}>{title}</h1>
-
+                        
                         <BlogFeaturedImage img={featured_image_url} />    
 
                         <div className="content">{ReactHtmlParser(content)}</div>
                     </div>
                 );
             }
-        }
+        };
 
-        return (
-        <div className="blog-container">{contentManager()}</div>
-        );
+        return <div className="blog-container">{contentManager()}</div>;
     }
 }

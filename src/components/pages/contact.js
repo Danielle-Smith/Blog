@@ -1,14 +1,15 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import loginImg from "../../../static/assets/images/auth/login.jpg";
+import compImg from "../../../static/assets/images/auth/computer.png";
 
 export default function () {
     return (
         <div className="contact-page-wrapper">
-            <div
+            Contact Form
+            {/* <div
                 className="contact-image"
                 style={{
-                    backgroundImage: `url(${loginImg})`
+                    backgroundImage: `url(${compImg})`
                 }}
             />
             <div className="right-column">
@@ -37,7 +38,7 @@ export default function () {
                         <div className="text">Lehi, UT</div>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 }

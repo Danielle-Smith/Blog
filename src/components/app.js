@@ -93,7 +93,13 @@ export default class App extends Component {
           />
 
           <Switch>
-            <Route exact path="/" component={Home} />
+            <Route 
+              exact path="/" 
+              render={props => (
+                <Blog {...props} loggedInStatus={this.state.loggedInStatus}
+                />
+              )}
+            />
             <Route path="/about-me" component={About} />
             <Route
               path="/auth"
@@ -107,13 +113,7 @@ export default class App extends Component {
             />
                 
             <Route path="/contact" component={Contact} />
-            <Route 
-              path="/blog" 
-              render={props => (
-                <Blog {...props} loggedInStatus={this.state.loggedInStatus}
-                />
-              )}
-            />
+            
 
             <Route
               path="/b/:slug"
