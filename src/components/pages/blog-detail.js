@@ -32,11 +32,12 @@ export default class BlogDetail extends Component {
     }
 
     getBlogItem() {
+        console.log(this.props.match.params.slug);
         axios.get(
-            `https://daniellesmith.devcamp.space/portfolio/portfolio_blogs/${this.state.currentId}`
+            `http://127.0.0.1:5000/post/${this.state.currentId}`
         ).then(response => {
             this.setState({
-                blogItem: response.data.portfolio_blog
+                blogItem: response.data
             });
         }).catch(error => {
             console.log("getBlogItem", error);
