@@ -16,7 +16,6 @@ export default class BlogForm extends Component {
             apiAction: "post"
         }
 
-        this.featuredImageRef = React.createRef();
 
     }
 
@@ -25,7 +24,7 @@ export default class BlogForm extends Component {
             this.setState({
                 id: this.props.blog.id,
                 title: this.props.blog.title,
-                blog_status: this.props.blog.blog_status,
+                author: this.props.blog.author,
                 content: this.props.blog.content,
                 apiUrl: `http://127.0.0.1:5000/post/${this.props.blog.id}`,
                 apiAction: "patch"
