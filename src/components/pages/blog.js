@@ -13,14 +13,7 @@ class Blog extends Component {
             blogItems: []
         };
 
-        // this.state = {
-        //     blogItems: [],
-        //     totalCount: 0,
-        //     currentPage: 0,
-        //     isLoading: true,
-        //     blogModalIsOpen: false
-        // }
-        // window.addEventListener("scroll", this.onScroll, false)
+  
     }
 
     // handleSuccessfulNewBlogSubmission = (blog) => {

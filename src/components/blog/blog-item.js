@@ -16,7 +16,7 @@ class BlogItem extends Component {
 
      
         return (
-            <div>
+            <div className="blog-item-list">
                 <Link to={`/b/${id}`}>
                     <h1>{title}</h1>
                 </Link>
