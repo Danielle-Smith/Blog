@@ -16,6 +16,7 @@ import PortfolioManager from "./pages/portfolio-manager";
 import Auth from "./pages/auth";
 import NoMatch from "./pages/no-match";
 import Icons from "../helpers/icons";
+import Login from "./auth/login";
 
 
 
@@ -114,7 +115,7 @@ export default class App extends Component {
                 
             <Route path="/contact" component={Contact} />
             
-
+          
             <Route
               path="/b/:slug"
               render={props => (

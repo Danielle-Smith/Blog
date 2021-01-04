@@ -8,7 +8,7 @@ export default class Login extends Component {
         super(props);
         
         this.state = {
-            email: "",
+            name: "",
             password: "",
             errorText: ""
         }
@@ -22,20 +22,14 @@ export default class Login extends Component {
     }
 
     handleSubmit = (event) => {
-        axios.post("https://api.devcamp.space/sessions",
-        {
-            client: {
-                email: this.state.email,
-                password: this.state.password
-            }
-        },
-        { withCredentials: true }
+        axios.post("http://127.0.0.1:5000/login",
+        console.log("hi")
         ).then(response => {
-            if (response.data.status === 'created') {
+            if (response.status === 200) {
                 this.props.handleSuccessfulAuth();
             } else {
                 this.setState({
-                    errorText: "Wrong email or password"
+                    errorText: "Wrong name or password"
                 });
                 this.props.handleUnsuccessfulAuth();
             }
@@ -43,7 +37,7 @@ export default class Login extends Component {
             this.setState({
                 errorText: "An error occurred"
             });
-            this.props.handleUnsuccessfulAuth();
+            // this.props.handleUnsuccessfulAuth();
         });
 
         event.preventDefault();
@@ -56,14 +50,14 @@ export default class Login extends Component {
 
                 <div>{this.state.errorText}</div>
  
-                <form onSubmit={this.handleSubmit} className="auth-form-wrapper">
+                <form onSubmit={this.handleSubmit} className="auth-form-wrapper" action="/login" method="POST">
                     <div className="form-group">
                         <FontAwesomeIcon icon="envelope" />
                         <input 
-                            type="email"
-                            name="email"
-                            placeholder="Your email"
-                            value={this.state.email}
+                            type="name"
+                            name="name"
+                            placeholder="Your name"
+                            value={this.state.name}
                             onChange={this.handleChange}
                         />
                     </div>
