@@ -28,9 +28,7 @@ export default class App extends Component {
 
         <Router>
           <div>
-          <NavigationContainer 
-      
-          />
+          <NavigationContainer />
 
           <Switch>
             <Route 
