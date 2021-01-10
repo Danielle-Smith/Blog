@@ -1,44 +1,129 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import compImg from "../../../static/assets/images/auth/computer.png";
+import React, { useState } from 'react';
+import { useHistory } from "react-router-dom";
 
-export default function () {
+
+
+function Contact() {
+    let history = useHistory();
+    const [form, setForm] = useState({ name: '', email: '', message: '' });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  
+    const validate = () => {
+      let err = {};
+      if (!form.name) {
+        err.name = 'Name is required';
+      }
+      if (!form.email) {
+        err.email = 'Email is required';
+      }
+      if (!form.message) {
+        err.message = 'Message is required';
+      }
+  
+      return err;
+    }
+
+
+    const handleChange = e => {
+      setForm({
+        ...form,
+        [e.target.name]: e.target.value
+      });
+    };
+  
+    const postNotes = async (data) => {
+      await fetch('http://127.0.0.1:5000/contact-form', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+      
+
+    }
+  
+    const handleSubmit = async e => {
+      e.preventDefault();
+      const errs = validate();
+  
+      if (Object.keys(errs).length === 0) {
+        setIsSubmitting(true)
+        await postNotes(form);
+        setIsSubmitting(false);
+        setForm({ name: '', email: '', message: '' })
+        history.push('/message');
+      } else {
+        showError(errs);
+      }
+  
+    };
+  
+    const showError = (errorObj) => {
+      let errMsg = '';
+      for (let err in errorObj) {
+        errMsg += `${errorObj[err]}. `
+      }
+      alert(`Errors ${errMsg}`);
+    }
+
+  
     return (
-        <div className="contact-page-wrapper">
-            Contact Form
-            {/* <div
-                className="contact-image"
-                style={{
-                    backgroundImage: `url(${compImg})`
-                }}
-            />
-            <div className="right-column">
-                <div className="contact-bullet-points">
-                    <div className="bullet-point-group">
-                        <div className="icon">
-                            <FontAwesomeIcon icon="phone" />
-                        </div>
-
-                        <div className="text">555-555-5555</div>
-                    </div>
-
-                    <div className="bullet-point-group">
-                        <div className="icon">
-                            <FontAwesomeIcon icon="envelope" />
-                        </div>
-
-                        <div className="text">danielle@example.com</div>
-                    </div>
-
-                    <div className="bullet-point-group">
-                        <div className="icon">
-                            <FontAwesomeIcon icon="map-marker-alt" />
-                        </div>
-
-                        <div className="text">Lehi, UT</div>
-                    </div>
-                </div>
-            </div> */}
+      <div className='contact'>
+        
+        <div className='container' style={{ width: '400px', marginTop: 20 }}>
+          {
+            isSubmitting
+              ?
+              <div className="spinner-border" role="status">
+                <span className="sr-only">Loading...</span>
+              </div>
+              : ''
+          }
+          <form onSubmit={handleSubmit}>
+            <fieldset>
+              <div className='form-group'>
+                <label>Name</label>
+                <input
+                  type='text'
+                  name='name'
+                  className='form-control'
+                  onChange={handleChange}
+                  value={form.name}
+                  placeholder='Name'
+                />
+              </div>
+              <div className='form-group'>
+                <label>Email</label>
+                <input
+                  type='text'
+                  name='email'
+                  className='form-control'
+                  onChange={handleChange}
+                  value={form.email}
+                  placeholder='Email'
+                />
+              </div>
+              <div className='form-group'>
+                <label>Message</label>
+                <textarea
+                  className='form-control'
+                  name='message'
+                  onChange={handleChange}
+                  value={form.message}
+                  placeholder='Message...'
+                  id='exampleTextarea'
+                  rows='3'
+                ></textarea>
+              </div>
+            </fieldset>
+            <button type="submit" className="contact-btn">Submit</button>
+          </form>
+          
         </div>
+      </div>
     );
-}
+  }
+export default Contact;

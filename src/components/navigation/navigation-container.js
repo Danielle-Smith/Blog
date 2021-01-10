@@ -44,15 +44,14 @@ const NavigationComponent = (props) => {
                     <NavLink to="/contact" activeClassName="nav-link-active">Contact</NavLink>
                 </div>
 
-                {props.loggedInStatus === "LOGGED_IN" ? (
-                    dynamicLink("/portfolio-manager", "Portfolio Manager")
-                ) : null}
             </div>
             
-            <div className="right-side">DANIELLE SMITH
-            {props.loggedInStatus === "LOGGED_IN" ? (<a onClick={handleSignOut}> 
-            <FontAwesomeIcon icon="sign-out-alt"/>
-            </a>) : null}
+            <div className="right-side-wrapper">
+                <div className="right-side">
+                    <p>DANIELLE SMITH</p>
+
+                    <a href="http://127.0.0.1:5000/admin" target="_blank" ClassName="admin-link">Admin</a>
+                </div>
             </div>
         </div>
     );

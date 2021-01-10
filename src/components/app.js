@@ -5,15 +5,12 @@ import {
   Route
 } from "react-router-dom";
 import NavigationContainer from "./navigation/navigation-container";
-import Home from "./pages/home";
 import About from "./pages/about";
 import Contact from "./pages/contact";
 import Blog from "./pages/blog";
 import BlogDetail from "./pages/blog-detail";
-import NoMatch from "./pages/no-match";
 import Icons from "../helpers/icons";
-
-
+import Message from "./pages/message";
 
 
 export default class App extends Component {
@@ -54,7 +51,8 @@ export default class App extends Component {
             />
                 
             <Route path="/contact" component={Contact} />
-            
+            <Route path="/message" component={Message} />
+        
           
             <Route
               path="/b/:slug"
