@@ -33,7 +33,7 @@ function Contact() {
     };
   
     const postNotes = async (data) => {
-      await fetch('http://127.0.0.1:5000/contact-form', {
+      await fetch('https://dds-blogdb.herokuapp.com/contact-form', {
         method: 'POST',
         headers: {
           'Accept': 'application/json',

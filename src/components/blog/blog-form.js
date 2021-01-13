@@ -12,7 +12,7 @@ export default class BlogForm extends Component {
             title: "",
             blog_status: "",
             content: "",
-            apiUrl: "http://127.0.0.1:5000/posts",
+            apiUrl: "https://dds-blogdb.herokuapp.com/posts",
             apiAction: "post"
         }
 
@@ -26,7 +26,7 @@ export default class BlogForm extends Component {
                 title: this.props.blog.title,
                 author: this.props.blog.author,
                 content: this.props.blog.content,
-                apiUrl: `http://127.0.0.1:5000/post/${this.props.blog.id}`,
+                apiUrl: `https://dds-blogdb.herokuapp.com/post/${this.props.blog.id}`,
                 apiAction: "patch"
             });
         }

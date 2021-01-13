@@ -15,7 +15,7 @@ class Blog extends Component {
 
     getBlogItems() {
         axios
-            .get('http://127.0.0.1:5000/posts')
+            .get('https://dds-blogdb.herokuapp.com/posts')
             .then(response => {
                 console.log("Response", response.data)
                 this.setState ({
