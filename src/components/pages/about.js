@@ -11,7 +11,7 @@ export default function () {
                     }} 
             />
             <div className="about-bio">
-                <p>Nunc um augue lectus sed ornare. Mauris efficitur est sed lorem fermentum tempor vitae eget lacus. Mauris mattis purus vel quam egestas tristique. Curabitur massa felis, iaculis id blandit nec, rutrum et massa. Quisque ante urna, efficitur eget urna vel, ornare laoreet nunc. In ut elit ultricies, tempor tellus ac, pretium dolor. Aenean imperdiet tortor in dolor ullamcorper, non lacinia lectus egestas. Curabitur mollis vestibulum ante, eget egestas neque elementum sed. Pellentesque id ipsum non mi euismod maximus.</p>
+                <p>Hi! I am Emily Davis, a web designer/developer focused on crafting great web experiences. Designing and Coding have been my passion since the days I started working with computers but I found myself into web design/development since 2007. I enjoy creating beautifully designed, intuitive and functional websites.</p>
             </div>
         </div>
     );
