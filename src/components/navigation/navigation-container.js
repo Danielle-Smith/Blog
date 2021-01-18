@@ -25,8 +25,8 @@ const NavigationComponent = (props) => {
             
             <div className="right-side-wrapper">
                 <div className="right-side">
-                    <a href="http://127.0.0.1:5000/signup" target="_blank" ClassName="admin-link">Register</a>
-                    <a href="http://127.0.0.1:5000/admin" target="_blank" ClassName="admin-link">Admin</a>
+                    <a href="dds-blogdb.herokuapp.com/signup" target="_blank" ClassName="admin-link">Register</a>
+                    <a href="dds-blogdb.herokuapp.com/admin" target="_blank" ClassName="admin-link">Admin</a>
                 </div>
             </div>
         </div>
