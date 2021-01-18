@@ -2,9 +2,6 @@ import React, {Component } from "react";
 import axios from "axios";
 import ReactHtmlParser from "react-html-parser";
 
-import BlogForm from "../blog/blog-form";
-
-
 export default class BlogDetail extends Component {
     constructor(props) {
         super(props);
