@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from "react-router";
 import { NavLink } from "react-router-dom";
-import { ExternalLink } from 'react-external-link';
+
 
 
 const NavigationComponent = (props) => {
