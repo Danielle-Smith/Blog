@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from "react-router";
-import { NavLink } from "react-router-dom";import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { NavLink } from "react-router-dom";
+import { ExternalLink } from 'react-external-link';
 
 
 const NavigationComponent = (props) => {
@@ -25,8 +26,8 @@ const NavigationComponent = (props) => {
             
             <div className="right-side-wrapper">
                 <div className="right-side">
-                    <a href="dds-blogdb.herokuapp.com/signup" target="_blank" ClassName="admin-link">Register</a>
-                    <a href="dds-blogdb.herokuapp.com/admin" target="_blank" ClassName="admin-link">Admin</a>
+                    <a href="https://dds-blogdb.herokuapp.com/signup" target="_blank" ClassName="admin-link">Register</a>
+                    <a href="https://dds-blogdb.herokuapp.com/admin" target="_blank" ClassName="admin-link">Admin</a>
                 </div>
             </div>
         </div>
