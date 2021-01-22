@@ -21,8 +21,8 @@ class BlogItem extends Component {
                     <h1>{title}</h1>
                 </Link>
                 
-                <Truncate lines={5} ellipsis={
-                    <span>
+                <Truncate style={{fontSize:"1.7em"}} lines={5} ellipsis={
+                    <span >
                         ...<Link to={`/b/${id}`}>Read more</Link>
                     </span>
                 }>
