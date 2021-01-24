@@ -91,7 +91,7 @@
 }
 
 .blog-item-list {
-    margin: 40px 0px;
+    margin: 40px 40px 40px 0px;
 }
 
 @media(max-width: 770px) {
@@ -101,20 +101,3 @@
     }
 }
 
-@media(max-width: 550px) {
-    .blog-wrapper {
-        align-self: center;        
-    }
-
-    h1 {
-        font-size: 4em;
-    }
-
-    span {
-        visibility: hidden;
-    }
-
-    .blog-item-list {
-        margin: 0px 0px;
-    }
-}
