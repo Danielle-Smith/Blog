@@ -57,29 +57,14 @@ export default class BlogDetail extends Component {
             author,
             content,
         } = this.state.blogItem;
-
         
-
-        const contentManager = () => {
-            if (this.state.editMode) {
-                return (
-                    <BlogForm 
-                    editMode={this.state.editMode} 
-                    blog={this.state.blogItem} 
-                    handleFeaturedImageDelete={this.handleFeaturedImageDelete}
-                    handleUpdateFormSubmission={this.handleUpdateFormSubmission}/>
-                );
-            } else {
-                return (
-                    <div className="content-container">
-                        <h1 onClick={this.handleEditClick}>{title}</h1>   
-                        <div className="author">By:{author}</div>
-                        <div className="content">{ReactHtmlParser(content)}</div>
-                    </div>
-                );
-            }
-        };
-
-        return <div className="blog-container">{contentManager()}</div>;
+        return (
+            <div className="content-container">
+                <h1 onClick={this.handleEditClick}>{title}</h1>   
+                <div className="author">By:{author}</div>
+                <div className="content">{ReactHtmlParser(content)}</div>
+            </div>
+        );
+        
     }
 }

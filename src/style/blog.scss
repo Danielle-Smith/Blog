@@ -36,7 +36,6 @@
   .content-container {
       display: flex;
       flex-direction: column;
-    //   width: 800px;
       margin-top: 20px;
 
       a {
@@ -78,15 +77,15 @@
 
     
 
-      .featured-image-wrapper {
-          img {
-              margin: 15px 0px;
-              width: 100%;
-              height: 350px;
-              border-radius: 5px;
-              object-fit: cover;
-          }
-      }
+    //   .featured-image-wrapper {
+    //       img {
+    //           margin: 15px 0px;
+    //           width: 100%;
+    //           height: 350px;
+    //           border-radius: 5px;
+    //           object-fit: cover;
+    //       }
+    //   }
   }
 }
 
