@@ -73,7 +73,7 @@ function Contact() {
     return (
       <div className='contact'>
         
-        <div className='container' style={{ width: '400px', marginTop: 20 }}>
+        <div className='container' >
           {
             isSubmitting
               ?

@@ -2,17 +2,14 @@ html {
   font-size: 62.5%; // 1rem is 10px
 }
 
-body {
-  background-color: rgb(232, 239, 250);
-}
-
 .app {
   margin-top: 2rem;
   display: grid;
   justify-items: center;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: 1fr;
+.app-wrapper {
+  background-color: #e8effa;
+  position: absolute;
+  width: 100vw;
 }
