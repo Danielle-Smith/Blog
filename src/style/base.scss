@@ -9,7 +9,10 @@ html {
 }
 
 .app-wrapper {
-  background-color: #e8effa;
+  background-image: url("../../static/assets/images/auth/light-honeycomb.jpg");
   position: absolute;
-  width: 100vw;
+  width: 100%;
+  background-attachment: fixed;
+  height: 100%;
+  overflow: auto;
 }

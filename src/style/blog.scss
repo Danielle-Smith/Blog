@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-//   position: relative;
+
 
   .admin-blog-wrapper {
       display: flex;
@@ -16,7 +16,6 @@
   }
 
   .new-blog-link {
-    //   position: fixed;
       right: 0;
       top: 10;
 
@@ -29,6 +28,7 @@
 
           &:hover {
               color: $dark-teal;
+              text-decoration: none;
           }
       }
   }
@@ -37,8 +37,8 @@
       display: flex;
       flex-direction: column;
       margin-top: 20px;
-
-
+      padding: 0px 150px;
+      
       a {
           text-decoration: none;
           color: $teal;
@@ -46,11 +46,13 @@
 
           &:hover {
               color: $dark-teal;
+              text-decoration: none;
           }
       }
 
       .blog-item {
           margin: 20px 0px;
+          
       }
 
       span {
@@ -61,12 +63,8 @@
         
         }
 
-      h1 {
-          font-size: 3em;
-          padding-bottom: 15px;
-      }
       .author {
-          color: black;
+          color: $dark-teal;
           font-weight: 700;
           margin-bottom: 10px;
       }
@@ -81,12 +79,55 @@
 
 .blog-item-list {
     margin: 40px 0px;
+
+    a {
+        color: $blue;
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: $blue-hover;
+    }
+
+    h1 {
+        font-size: 5.5em;
+        font-weight: 700;
+    }
 }
 
 
 .content {
     align-self: center;
-    font-size: 1.4em;
+    font-size: 2.2em;
+    padding: 50px 0px;
 }
+
+#blog-detail-page {
+    height: 100vh;
+    padding: 0px 150px;
+  }
+
+h1 {
+    padding-bottom: 15px;
+    font-weight: 700;
+}
+
+.the-blog {
+    padding: 0px 150px;
+}
+
+.blog-title-detail {
+    color: $blue;
+    font-size: 5em;
+    padding: 0px;
+    font-weight: 700;
+}
+
+.author {
+    color: $blue-hover;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
 
 

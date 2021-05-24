@@ -1,4 +1,4 @@
-import React, {Component } from "react";
+import React, { Component } from "react";
 import axios from "axios";
 import ReactHtmlParser from "react-html-parser";
 
@@ -57,14 +57,14 @@ export default class BlogDetail extends Component {
             author,
             content,
         } = this.state.blogItem;
-        
+
         return (
-            <div className="content-container">
-                <h1 onClick={this.handleEditClick}>{title}</h1>   
+            <div className="content-container" id="blog-detail-page">
+                <h1 className="blog-title-detail" onClick={this.handleEditClick}>{title}</h1>
                 <div className="author">By:{author}</div>
                 <div className="content">{ReactHtmlParser(content)}</div>
             </div>
         );
-        
+
     }
 }
