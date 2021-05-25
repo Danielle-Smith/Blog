@@ -2,16 +2,13 @@ import React from 'react';
 import { withRouter } from "react-router";
 import { NavLink } from "react-router-dom";
 
-
-
 const NavigationComponent = (props) => {
-   
 
     return (
         <div className="nav-wrapper">
             <div className="left-side">
                 <div className="nav-link-wrapper">
-                    <NavLink exact to="/" activeClassName="nav-link-active">Home</NavLink> 
+                    <NavLink exact to="/" activeClassName="nav-link-active">Home</NavLink>
                 </div>
 
                 <div className="nav-link-wrapper">
@@ -23,7 +20,7 @@ const NavigationComponent = (props) => {
                 </div>
 
             </div>
-            
+
             <div className="right-side-wrapper">
                 <div className="right-side">
                     <a href="https://dds-blogdb.herokuapp.com/signup" target="_blank" className="admin-link">Register</a>

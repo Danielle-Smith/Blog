@@ -129,5 +129,14 @@ h1 {
     margin-bottom: 10px;
 }
 
+@media(max-width: 1020px) {
+    .the-blog, #blog-detail-page {
+      padding: 0px 50px;
+    } 
+    .blog-item-list h1, .blog-title-detail {
+      font-size: 3em;
+    }
+
+  }
 
 
