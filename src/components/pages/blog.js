@@ -11,7 +11,6 @@ class Blog extends Component {
     };
   }
 
-
   getBlogItems() {
     axios
       .get('https://dds-blogdb.herokuapp.com/posts')
@@ -48,11 +47,9 @@ class Blog extends Component {
             : null
         }
 
-
       </div>
     );
   }
-
 }
 
 export default Blog;

@@ -15,12 +15,11 @@
             padding: 9px;
             font-size: 1rem;
             cursor: pointer;
-            color: rgb(189, 187, 187);
+            color: $light-grey;
             transition: 0.5 ease-in-out;
             
-  
             &:hover {
-                color: grey;
+                color: $grey;
                 text-decoration: none;
             }
         }
@@ -38,14 +37,13 @@
             color: $grey;
             text-decoration: none;
             &:hover {
-                color: black;
+                color: $black;
             }
         }
   
         .nav-link-active {
             border-bottom: 1px solid black;
-            color: black;
-            
+            color: $black;
         }
     }
   }
@@ -62,7 +60,6 @@
 
     .right-side {
         align-self: right;
-        
     }
 
     a {

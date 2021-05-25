@@ -13,23 +13,22 @@ export default class BlogDetail extends Component {
         };
     }
 
-    handleUpdateFormSubmission = (blog) => {
-        this.setState({
-            blogItem: blog,
-            editMode: false
-        });
-    }
+    // handleUpdateFormSubmission = (blog) => {
+    //     this.setState({
+    //         blogItem: blog,
+    //         editMode: false
+    //     });
+    // }
 
-    handleFeaturedImageDelete = () => {
-        this.setState({
-            blogItem: {
-                featured_image_url: ""
-            }
-        });
-    }
+    // handleFeaturedImageDelete = () => {
+    //     this.setState({
+    //         blogItem: {
+    //             featured_image_url: ""
+    //         }
+    //     });
+    // }
 
     getBlogItem() {
-        console.log(this.props.match.params.slug);
         axios.get(
             `https://dds-blogdb.herokuapp.com/post/${this.state.currentId}`
         ).then(response => {
@@ -45,11 +44,11 @@ export default class BlogDetail extends Component {
         this.getBlogItem();
     }
 
-    handleEditClick = () => {
-        if (this.props.loggedInStatus === "LOGGED_IN") {
-            this.setState({ editMode: true });
-        }
-    }
+    // handleEditClick = () => {
+    //     if (this.props.loggedInStatus === "LOGGED_IN") {
+    //         this.setState({ editMode: true });
+    //     }
+    // }
 
     render() {
         const {

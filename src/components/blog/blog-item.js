@@ -9,7 +9,6 @@ class BlogItem extends Component {
     }
 
     render() {
-
         const { id, content, title } = this.props;
 
         return (

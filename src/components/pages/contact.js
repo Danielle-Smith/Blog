@@ -8,7 +8,6 @@ function Contact() {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [messageSent, setMessageSent] = useState(false);
 
-
   const validate = () => {
     let err = {};
     if (!form.name) {
@@ -20,10 +19,8 @@ function Contact() {
     if (!form.message) {
       err.message = 'Message is required';
     }
-
     return err;
   }
-
 
   const handleChange = e => {
     setForm({
@@ -41,8 +38,6 @@ function Contact() {
       },
       body: JSON.stringify(data)
     });
-
-
   }
 
   const handleSubmit = async e => {
@@ -56,7 +51,6 @@ function Contact() {
     } else {
       showError(errs);
     }
-
   };
 
   const showError = (errorObj) => {
@@ -67,15 +61,14 @@ function Contact() {
     alert(`Errors ${errMsg}`);
   }
 
-
   return (
     <div className='contact'>
-
       <div className='container' >
         <form className="form" onSubmit={handleSubmit}>
-          <fieldset>
-            <div className='form-group'>
 
+          <fieldset>
+
+            <div className='form-group'>
               <input
                 type='text'
                 name='name'
@@ -85,8 +78,8 @@ function Contact() {
                 placeholder='Name'
               />
             </div>
-            <div className='form-group'>
 
+            <div className='form-group'>
               <input
                 type='text'
                 name='email'
@@ -96,8 +89,8 @@ function Contact() {
                 placeholder='Email'
               />
             </div>
-            <div className='form-group'>
 
+            <div className='form-group'>
               <textarea
                 className='form-control'
                 name='message'
@@ -108,17 +101,18 @@ function Contact() {
                 rows='6'
               ></textarea>
             </div>
+
           </fieldset>
+
           <div className="contact-btn-wrapper">
             <button type="submit" className="contact-btn">Submit</button>
           </div>
+
           <div className="message">
             {messageSent ? "Message Sent. Thank you!" : ""}
           </div>
+
         </form>
-
-
-
       </div>
     </div>
   );
