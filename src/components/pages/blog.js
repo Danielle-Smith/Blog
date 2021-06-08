@@ -1,12 +1,15 @@
 import React, { Component } from "react";
 import axios from "axios";
 import BlogItem from "../blog/blog-item";
+import ListLoader from "../list-loader";
+
 
 class Blog extends Component {
   constructor() {
     super();
 
     this.state = {
+      isLoading: true,
       blogItems: []
     };
   }
@@ -17,6 +20,7 @@ class Blog extends Component {
       .then(response => {
         console.log("Response", response.data)
         this.setState({
+          isLoading: false,
           blogItems: response.data
         });
 
@@ -31,9 +35,13 @@ class Blog extends Component {
   }
 
   render() {
+    if (this.state.isLoading) {
+      return <div className="loading">
+        <ListLoader />
+      </div>;
+    }
     return (
       <div className="the-blog">
-
         {
           this.state.blogItems !== null ?
             <div className="blog-wrapper" >
